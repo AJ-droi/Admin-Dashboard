@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Dashboard Page */
+
+.navbar{
+   display: flex;
+   position: fixed;
+   margin-left: 15%;
+   margin-top: 2%;
+   padding: 0% 10%;
+   justify-content: space-between;
+   align-items: center;
+   place-items: center;
+   height: 10vh;
+   width: 80%;
+   color: black;
+}
+
+.navbar h1{
+    font-size: 1.5rem;
+    
+}
+
+.nav-icons{
+    font-size: 1.5rem;
+}
+
+.container1{
+    display: flex;
+    height:100vh;
+}
+
+.sidebar {
+    position: fixed;
+    top:0;
+    display: grid;
+    justify-content: center;
+    align-content: start ;
+    width: 20vw;
+    height: 100vh;
+    background-color: rgb(75, 8, 139);
+}
+
+.sidebar h3 {
+  margin-top: 20%;
+  padding-top: 5%;
+  font-size: 1.5rem;
+  color:white;
+  text-align: center;
+}
+
+.sidebar ul {
+  margin-top: 33%;
+}
+
+.sidebar li {
+  list-style-type: none;
+  padding: 17% 0%;
+}
+
+#side-link {
+  text-decoration: none;
+  color: white;
+  vertical-align: middle;
+}
+
+#side-icon {
+  vertical-align: middle;
+  padding-right: 2%;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Home Section */
+
+.charts{
+    display: grid;
+    /* position: relative; */
+    margin-top: 11%;
+    margin-left: 23%;
+    justify-content: center;
+    place-items: center;
+    width: 100%;
+    text-align: center;
+    padding-top: 5%;
+    padding-right: 8%;
+}
+
+.charts h5{
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.table-container,
+.client-container {
+    display: grid;
+    align-content: start;
+    width: 80%;
+    margin-top: 0%;
+    padding-left: 35%;
+    height:100vh;
+}
+
+
+thead {
+  background-color: black;
+}
+
+tbody tr{
+    padding: 12%;
+}
+
+table img{
+    height: 7vh;
+    border-radius:5px;
+    object-fit: center;
+}
+
+/* Product Section */
+
+.product-container{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    width: 80%;
+    height:100vh;
+    padding: 6% 10%;
+    margin-left: 24%;
+   
+}
+.card{
+  height: 50vh;
+  width: 100%;
+}
+.card img{
+  height: 20vh;
+}
+
+
