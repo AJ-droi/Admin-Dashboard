@@ -13,23 +13,26 @@ const Product = () => {
 
   return (
     <div className="product-container">
-      {products
-        ? products.map((product, idx) => (
-            <div className="card" >
-              <img
-                className="card-img-top"
-                src={product.image}
-                alt="Cardcap"
-              />
-              <div className="card-body">
-                <h5 className="card-title">{product.name}</h5>
-                <p className="card-text">$ {product.net_price}</p>
-                <p className="card-text">{product.taxes}</p>
-                <p className="card-text">$ {product.price}</p>
+      <section className="row">
+        {products
+          ? products.map((product, idx) => (
+              <div className="card col-lg-4 col-md-12 mt-5" >
+                <img
+                  className="card-img-top"
+                  src={product.image}
+                  alt="Cardcap"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{product.name}</h5>
+                  <p className="card-text">$ {product.net_price}</p>
+                  <p className="card-text">{product.taxes}</p>
+                  <p className="card-text">$ {product.price}</p>
+                </div>
               </div>
-            </div>
-          ))
-        : null}
+            ))
+          : null}
+      </section>
+      
     </div>
   );
 };

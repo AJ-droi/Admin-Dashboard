@@ -7,7 +7,6 @@
 
 .navbar{
    display: flex;
-   position: fixed;
    margin-left: 15%;
    margin-top: 2%;
    padding: 0% 10%;
@@ -26,6 +25,11 @@
 
 .nav-icons{
     font-size: 1.5rem;
+}
+
+
+#menu{
+  visibility: hidden;
 }
 
 .container1{
@@ -94,19 +98,29 @@
     font-weight: 700;
 }
 
+/* Team Section */
+
 .table-container,
 .client-container {
     display: grid;
     align-content: start;
     width: 80%;
     margin-top: 0%;
-    padding-left: 35%;
+    margin-left: 25%;
     height:100vh;
+    width: 100%;
+    overflow-x: scroll;
+    border-radius: 5px;
+}
+
+table{
+  margin-top: 0.5%;
 }
 
 
 thead {
-  background-color: black;
+  background-color: rgb(75, 8, 139);
+  padding: 5% 0%;
 }
 
 tbody tr{
@@ -123,20 +137,105 @@ table img{
 
 .product-container{
     display: grid;
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: auto auto auto;
-    width: 80%;
+    justify-content: center;
+    width: 50%;
     height:100vh;
-    padding: 6% 10%;
-    margin-left: 24%;
+    margin-left: 35%;
+    z-index: -1;
    
 }
+
 .card{
   height: 50vh;
-  width: 100%;
 }
 .card img{
   height: 20vh;
 }
 
 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .navbar{
+    align-items: center;
+    margin: 2% 0%;
+    padding: 0% 10%;
+    width:100%;
+    height: 18vh;
+    background-color: rgb(75, 8, 139);
+    color: white
+  }
+
+  
+  hr{ 
+    visibility: hidden;
+  }
+
+  .navbar h1{
+    font-size: 1rem ;
+    margin-top: 1rem;
+  }
+
+  span{
+    font-size: 1.5rem;
+  }
+
+  .text-dark{
+    font-size: 1.3rem;
+  }
+
+  
+  .sidebar{
+    width:50vw;
+    position: fixed;
+    height: 100%;
+  }
+
+  #side-link{
+    font-size: 0.8rem;
+  }
+
+  #side-icon{
+    padding-left: 0%;
+  }
+
+  .charts{
+    display: grid;
+    margin-top: 55%;
+    margin-left: 14%;
+    width: 80%;
+    z-index: -1;
+    
+  }
+
+ 
+  .charts h5{
+    font-size: 1rem;
+
+  }
+
+  /* Team Section */
+  .table-container,
+  .client-container{
+    margin-top: 15%;
+    margin-left: 0%;
+    justify-content: start;
+    padding: 0%;
+  }
+
+  #menu{
+    visibility: visible;
+  }
+
+    /* Product Section */
+  .product-container{
+    width:100%;
+    margin: 0%;
+    padding: 0% 5%;
+  }
+
+  #nav-icon{
+    color: white;
+  }
+
+
+
+}

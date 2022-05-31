@@ -1,6 +1,6 @@
 import React from "react";
 import "./Dashboard.css";
-import { AiFillHome, AiOutlineTeam, AiFillProject, AiTwotoneBell } from "react-icons/ai";
+import { AiFillHome, AiOutlineTeam, AiFillProject, AiTwotoneBell, AiOutlineMenu} from "react-icons/ai";
 import { RiUserFollowLine, RiLogoutBoxRFill } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import{ Routes, Route, Link} from "react-router-dom";
@@ -16,24 +16,44 @@ const handleLogout = () => {
 
 const Dashboard = () => {
 
-  let userDetails = JSON.parse(sessionStorage.getItem("userDetails"))
+let userDetails = JSON.parse(sessionStorage.getItem("userDetails"))
+
+const openNav = () =>{
+    document.getElementById("sidebar").style.left= "0px";
+} 
+
+const closeNav = () =>{
+    document.getElementById("sidebar").style.left= "-600px";
+} 
+
+
+const navClick = () => {
+    if(window.innerWidth < 992){
+      closeNav();
+    }else{
+      openNav();
+    }
+  }
 
 
   return (
     <div>
       <nav className="navbar" >
-        <h1 >Welcome {userDetails.Name}</h1>
+          
+      <span><AiOutlineMenu id="menu" onClick={openNav} /></span><h1 > Welcome {userDetails.Name}</h1>
+        
         <div className="nav-icons">
-          <Link to="" className="text-dark"> <AiTwotoneBell /> </Link>
-          <Link to="" className="text-dark"> < CgProfile /> </Link>
+          <Link to="" className="text-dark"> <AiTwotoneBell id="nav-icon" /> </Link>
+          <Link to="" className="text-dark"> < CgProfile id="nav-icon" /> </Link>
         </div>
       </nav> 
       <hr />
+      
       <main className="container1">
         
-        <div className="sidebar">
+        <div className="sidebar" id="sidebar">
           <div>
-            <h3>.UNTitled</h3>
+            <h3> <AiOutlineMenu id="menu" onClick={navClick}/>.UNTitled</h3>
           </div>
           <ul>
             <li>
@@ -60,6 +80,7 @@ const Dashboard = () => {
                 Product
               </Link>
             </li>
+            <hr className="text-white"></hr>
             <li>
               <RiLogoutBoxRFill id="side-icon" />
               <Link id="side-link" to="/" onClick={() => handleLogout()} >

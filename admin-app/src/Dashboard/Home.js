@@ -1,5 +1,5 @@
 import React from "react";
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Pie, PieChart } from 'recharts';
+import { BarChart, Bar,  XAxis,  Tooltip, Pie, PieChart } from 'recharts';
 import "./Dashboard.css";
 
 const Home = () => {
@@ -72,7 +72,7 @@ const Home = () => {
 return (
     <div className="charts">
         <h5>Number of Social Media Followers <br /> 20,000</h5>
-        <BarChart className="charts" width={300} height={300} data={data}>
+        <BarChart className="bar-charts" width={300} height={300} data={data}>
             
             <XAxis dataKey="name" />
             {/* <YAxis />  */}
@@ -82,7 +82,7 @@ return (
             <Bar dataKey="uv" fill="#82ca9d" />
         </BarChart>
 
-        <PieChart width={400} height={400}>
+        <PieChart className="bar-charts" width={400} height={400}>
             <Pie
                 data={data01}
                 dataKey="value"
